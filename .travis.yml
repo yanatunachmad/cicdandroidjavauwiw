@@ -24,11 +24,10 @@ android:
 before_script:
   # Prepare pre-accepted licenses to not be promted at installation
   - yes | sdkmanager "platforms;android-29"
-
 script:
+  - chmod +x ./gradlew
+  - ./gradlew test
   - ./gradlew assemblerelease
-
-
 
 
 deploy:
